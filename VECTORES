@@ -54,6 +54,18 @@ for(i=0;i<nA;i++){
 
  }
 }
+void ordenar (int vec[],int n){
+	int i,j,aux;
+	for(i=0;i<n,i++){
+		for(j=i+1;j<n;j++){
+			if(vec[i]>vec[j]){
+				aux= vec[i];
+				vec[i]=vec[j];
+				vec[j]=aux;
+			}
+		}
+	}
+}
 
 
 void main(){

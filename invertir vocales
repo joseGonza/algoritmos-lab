@@ -1,0 +1,19 @@
+void invertir (char cad[]){
+	int i,n=strlen(cad);
+	char aux;
+	for(i=0;i<n/2;i++){
+		aux     =cad[i];
+		cad[i]  =cad[n-1-i];
+	cad[n-1-i]  =aux;
+	}
+}
+
+void main (){
+	char cad[80];
+	int r;
+	cout<< "Introducir cadena :";
+	gets (cad);
+	invertir(cad);
+	cout<<"la cantidad de vocales es ---->>:"<<cad;
+	getch();
+}

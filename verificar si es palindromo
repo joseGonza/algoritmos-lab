@@ -1,0 +1,28 @@
+bool verifSiEsPalindromo(char cad[]){
+	bool k=false;
+	char aux[80];
+	strcpy(aux,cad);
+	invertir(aux);
+	if(strcmp(aux,cad)==0){
+	  k=true;
+	}
+	return (k);
+}
+
+void main (){
+	char cad[80];
+	int r;
+	cout<< "Introducir cadena :";
+	do{
+	gets (cad);
+	}while(strlen(cad)==0);]//validar para que la cadena no se vacia 
+	if(verifSiEsPalindromo(cad)==true){
+		cout<<"La cadena si es Palindromo....";
+	}else{
+		cou<<"la cadena NO es palindromo...";
+	}
+
+	invertir(cad);
+	cout<<"la cantidad de vocales es ---->>:"<<cad;
+	getch();
+}

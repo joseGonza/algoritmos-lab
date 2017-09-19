@@ -1,0 +1,34 @@
+#include <iostream>
+#include <conio.h>
+#include <string.h>
+using namespace std;
+
+bool verifSiEsVocal(char car){
+	bool k=false;
+	if (car=='a'|| car=='e'||car=='i'||car=='o'||car=='u'||
+		car=='A'||car=='E'|| car=='I'||car=='O'||car=='U'){
+			k=true;
+	}
+	return(k);
+}
+
+int contarVocales(char cad[]){
+	int i,c=0,n=strlen(cad);
+	for(i=0;i<n;i++){
+		if(verifSiEsVocal(cad[i])==true){
+			c++;
+		}
+	}
+	return(c);
+}
+
+
+void main (){
+	char cad[80];
+	int r;
+	cout<< "Introducir cadena :";
+	gets (cad);
+	r=contarVocales(cad);
+	cout<<"la cantidad de vocales es ---->>:"<<r;
+	getch();
+}

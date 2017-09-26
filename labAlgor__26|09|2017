@@ -1,0 +1,61 @@
+#include <iostream>
+#include <conio.h>
+#include <string.h>
+using namespace std;
+
+
+struct tVector{
+	int sVec[20];
+};
+
+void cargar (tVector vec[],int n){
+	int i,j;
+	for(i=0;i<n;i++){
+		for(j=0;j<n;j++){
+			cout<<"Elemento para vec["<<i<<"].sVec["<<j<<"]:?";
+			cin>> vec[i].sVec[j];
+		}
+	}
+}
+
+void mostrar (tVector vec[],int n){
+	int i,j;
+	cout<<"\n\nEl vector de vectores es ---->>:\n";
+	for(i=0;i<n;i++){
+		for(j=0;j<n;j++){
+			cout<< vec[i].sVec[j]<<" ";
+		}
+		cout<<" ";
+	}
+}
+
+int sumartodo(tVector vec[],int n){
+	int i,j,s=0;
+	for(i=0;i<n;i++){
+		for(j=0;j<n;j++){
+			s=s+vec[i].sVec[j];
+		}
+	}return (s);
+}
+void invertirsVec(tVector vec[],int n){
+	int i ;
+	tVector aux;
+	for(i=0;i<n/2;i++){
+		aux=vec[i];
+		vec[i]=vec[n-1-i];
+		vec[n-1-i]=aux;
+	}
+}
+
+void main(){
+	int n,r;
+	tVector vec[20];
+	cout<<"Cuantos elementos para el vector ?:";
+	cin>>n;
+	cargar(vec,n);
+	mostrar(vec,n);
+	invertirsVec(vec,n);
+	cout<<"\n\nInvertido es --->>>:"<<r;
+	mostrar(vec,n);
+	getch();
+}

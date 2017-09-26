@@ -59,3 +59,28 @@ void main(){
 	mostrar(vec,n);
 	getch();
 }
+
+
+OTRO TRABAJO_____;
+void invertirtodo(tVector vec[],int n){
+	int i;
+	invertirsVec(vec,n);
+	for(i=0;i<n;i++){
+		invertirvecnormal(vec[i].sVec,n);
+	}
+}
+
+
+
+void main(){
+	int n,r;
+	tVector vec[20];
+	cout<<"Cuantos elementos para el vector ?:";
+	cin>>n;
+	cargar(vec,n);
+	mostrar(vec,n);
+	invertirtodo(vec,n);
+	cout<<"\n\nInvertido todo es --->>:"<<r;
+	mostrar(vec,n);
+	getch();
+}
